@@ -1,0 +1,27 @@
+{
+    "name": "kilofox/hyperf-captcha",
+    "description": "A captcha component for Hyperf.",
+    "license": "MIT",
+    "keywords": [
+        "php",
+        "hyperf",
+        "captcha"
+    ],
+    "require": {
+        "php": ">=7.4",
+        "psr/simple-cache": "^1.0",
+        "hyperf/http-message": "^2.2",
+        "hyperf/utils": "^2.2",
+        "symfony/string": "^5.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Kilofox\\Captcha\\": "src/"
+        }
+    },
+    "extra": {
+        "hyperf": {
+            "config": "Kilofox\\Captcha\\ConfigProvider"
+        }
+    }
+}
