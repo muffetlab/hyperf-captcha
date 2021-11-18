@@ -2,6 +2,8 @@
 
 This is the Captcha component for Hyperf 2.
 
+[![Release Version](https://img.shields.io/github/release/kilofox/hyperf-captcha.svg)](https://github.com/kilofox/hyperf-captcha/releases/latest) [![Latest Release Download](https://img.shields.io/github/downloads/kilofox/hyperf-captcha/latest/total.svg)](https://github.com/kilofox/hyperf-captcha/releases/latest) [![Total Download](https://img.shields.io/github/downloads/kilofox/hyperf-captcha/total.svg)](https://github.com/kilofox/hyperf-captcha/releases)
+
 ## Installation
 
 ```
@@ -28,9 +30,8 @@ $captchaFactory = ApplicationContext::getContainer()->get(CaptchaFactory::class)
 Render a captcha:
 
 ```
-$group = $this->request->query('group', 'default');
 $key = $this->request->query('key');
-$captcha = $captchaFactory->create($group, $key);
+$captcha = $captchaFactory->create($key);
 
 return $captcha->render();
 ```
