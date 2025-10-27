@@ -2,18 +2,18 @@
 
 This is the Captcha component for Hyperf 2.
 
-[![Release Version](https://img.shields.io/github/release/kilofox/hyperf-captcha.svg)](https://github.com/kilofox/hyperf-captcha/releases/latest) [![Latest Release Download](https://img.shields.io/github/downloads/kilofox/hyperf-captcha/latest/total.svg)](https://github.com/kilofox/hyperf-captcha/releases/latest) [![Total Download](https://img.shields.io/github/downloads/kilofox/hyperf-captcha/total.svg)](https://github.com/kilofox/hyperf-captcha/releases)
+[![Release Version](https://img.shields.io/github/release/muffetlab/hyperf-captcha.svg)](https://github.com/muffetlab/hyperf-captcha/releases/latest) [![Latest Release Download](https://img.shields.io/github/downloads/muffetlab/hyperf-captcha/latest/total.svg)](https://github.com/muffetlab/hyperf-captcha/releases/latest) [![Total Download](https://img.shields.io/github/downloads/muffetlab/hyperf-captcha/total.svg)](https://github.com/muffetlab/hyperf-captcha/releases)
 
 ## Installation
 
 ```
-$ composer require kilofox/hyperf-captcha
+$ composer require muffetlab/hyperf-captcha
 ```
 
 ## Publish
 
 ```
-$ php bin/hyperf.php vendor:publish kilofox/hyperf-captcha
+$ php bin/hyperf.php vendor:publish muffetlab/hyperf-captcha
 ```
 
 ## Usage
@@ -22,7 +22,7 @@ Instantiate captcha factory:
 
 ```
 use Hyperf\Utils\ApplicationContext;
-use Kilofox\Captcha\CaptchaFactory;
+use muffetlab\Captcha\CaptchaFactory;
 
 $captchaFactory = ApplicationContext::getContainer()->get(CaptchaFactory::class);
 ```
