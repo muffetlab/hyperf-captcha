@@ -3,8 +3,8 @@
 /**
  * Captcha factory.
  *
- * @author     Tinsh <kilofox2000@gmail.com>
- * @copyright  (c) 2021 Kilofox Studio
+ * @author     Loong <loong2460@gmail.com>
+ * @copyright  (c) 2021 Muffet Laboratory
  * @license    MIT License
  */
 
