@@ -11,7 +11,7 @@ declare(strict_types=1);
  * @license    MIT License
  */
 
-namespace Kilofox\Captcha;
+namespace Muffetlab\Captcha;
 
 class ConfigProvider
 {

@@ -10,7 +10,7 @@ declare(strict_types=1);
  * @license    MIT License
  */
 
-namespace Kilofox\Captcha\Driver;
+namespace Muffetlab\Captcha\Driver;
 
 use Symfony\Component\String\ByteString;
 use Kilofox\Captcha\Captcha;
