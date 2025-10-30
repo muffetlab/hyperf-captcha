@@ -1,5 +1,5 @@
 {
-    "name": "kilofox/hyperf-captcha",
+    "name": "muffetlab/hyperf-captcha",
     "description": "A captcha component for Hyperf.",
     "license": "MIT",
     "keywords": [
@@ -16,12 +16,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Kilofox\\Captcha\\": "src/"
+            "Muffetlab\\Captcha\\": "src/"
         }
     },
     "extra": {
         "hyperf": {
-            "config": "Kilofox\\Captcha\\ConfigProvider"
+            "config": "Muffetlab\\Captcha\\ConfigProvider"
         }
     }
 }
