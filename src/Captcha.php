@@ -10,7 +10,7 @@ declare(strict_types=1);
  * @license    MIT License
  */
 
-namespace Kilofox\Captcha;
+namespace Muffetlab\Captcha;
 
 use Psr\Http\Message\ResponseInterface;
 use Hyperf\HttpMessage\Stream\SwooleStream;

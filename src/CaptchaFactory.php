@@ -8,7 +8,7 @@
  * @license    MIT License
  */
 
-namespace Kilofox\Captcha;
+namespace Muffetlab\Captcha;
 
 use Psr\SimpleCache\CacheInterface;
 
