@@ -64,7 +64,7 @@ class CaptchaFactory
         }
 
         // Set the captcha driver class name
-        $class = '\\Kilofox\\Captcha\\Driver\\' . ucfirst(CaptchaFactory::$config['style']);
+        $class = '\\Muffetlab\\Captcha\\Driver\\' . ucfirst(CaptchaFactory::$config['style']);
 
         // Create a new captcha instance
         $instance = new $class($group);

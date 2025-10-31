@@ -13,7 +13,7 @@ declare(strict_types=1);
 namespace Muffetlab\Captcha\Driver;
 
 use Symfony\Component\String\ByteString;
-use Kilofox\Captcha\Captcha;
+use Muffetlab\Captcha\Captcha;
 
 class Black extends Captcha
 {

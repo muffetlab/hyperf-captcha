@@ -21,7 +21,7 @@ return [
         'height' => 50,
         'complexity' => 4,
         'background' => '',
-        'fontpath' => BASE_PATH . '/vendor/kilofox/hyperf-captcha/Resources/fonts',
+        'fontpath' => BASE_PATH . '/vendor/muffetlab/hyperf-captcha/Resources/fonts',
         'fonts' => ['DejaVuSerif.ttf'],
     ],
     // Words of varying length for Captcha_Word to pick from

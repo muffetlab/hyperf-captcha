@@ -12,7 +12,7 @@ declare(strict_types=1);
 
 namespace Muffetlab\Captcha\Driver;
 
-use Kilofox\Captcha\Captcha;
+use Muffetlab\Captcha\Captcha;
 
 class Math extends Captcha
 {
