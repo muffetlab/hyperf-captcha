@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Muffetlab\Captcha;
+
 /**
  * Captcha class.
  *
@@ -9,9 +11,6 @@ declare(strict_types=1);
  * @copyright  (c) 2021 Muffet Laboratory
  * @license    MIT License
  */
-
-namespace Muffetlab\Captcha;
-
 class ConfigProvider
 {
     public function __invoke(): array

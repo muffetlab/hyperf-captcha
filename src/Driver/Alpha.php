@@ -2,6 +2,11 @@
 
 declare(strict_types=1);
 
+namespace Muffetlab\Captcha\Driver;
+
+use Symfony\Component\String\ByteString;
+use Muffetlab\Captcha\Captcha;
+
 /**
  * Alpha captcha class.
  *
@@ -9,12 +14,6 @@ declare(strict_types=1);
  * @copyright  (c) 2021 Muffet Laboratory
  * @license    MIT License
  */
-
-namespace Muffetlab\Captcha\Driver;
-
-use Symfony\Component\String\ByteString;
-use Muffetlab\Captcha\Captcha;
-
 class Alpha extends Captcha
 {
     /**

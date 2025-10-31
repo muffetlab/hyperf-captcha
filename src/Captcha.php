@@ -2,14 +2,6 @@
 
 declare(strict_types=1);
 
-/**
- * Captcha class.
- *
- * @author     Loong <loong2460@gmail.com>
- * @copyright  (c) 2021 Muffet Laboratory
- * @license    MIT License
- */
-
 namespace Muffetlab\Captcha;
 
 use Hyperf\Context\Context;
@@ -17,6 +9,13 @@ use Hyperf\HttpMessage\Stream\SwooleStream;
 use Psr\Http\Message\ResponseInterface;
 use RuntimeException;
 
+/**
+ * Captcha class.
+ *
+ * @author     Loong <loong2460@gmail.com>
+ * @copyright  (c) 2021 Muffet Laboratory
+ * @license    MIT License
+ */
 abstract class Captcha
 {
     /**

@@ -1,5 +1,11 @@
 <?php
 
+namespace Muffetlab\Captcha;
+
+use Psr\SimpleCache\CacheInterface;
+use Psr\SimpleCache\InvalidArgumentException;
+use RuntimeException;
+
 /**
  * Captcha factory.
  *
@@ -7,13 +13,6 @@
  * @copyright  (c) 2021 Muffet Laboratory
  * @license    MIT License
  */
-
-namespace Muffetlab\Captcha;
-
-use Psr\SimpleCache\CacheInterface;
-use Psr\SimpleCache\InvalidArgumentException;
-use RuntimeException;
-
 class CaptchaFactory
 {
     /**
