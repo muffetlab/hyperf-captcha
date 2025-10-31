@@ -12,9 +12,9 @@ declare(strict_types=1);
 
 namespace Muffetlab\Captcha;
 
-use Psr\Http\Message\ResponseInterface;
+use Hyperf\Context\Context;
 use Hyperf\HttpMessage\Stream\SwooleStream;
-use Hyperf\Utils\Context;
+use Psr\Http\Message\ResponseInterface;
 
 abstract class Captcha
 {
