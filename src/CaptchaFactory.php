@@ -30,7 +30,7 @@ class CaptchaFactory
     /**
      * @var \Psr\SimpleCache\CacheInterface
      */
-    protected $cache;
+    protected CacheInterface $cache;
 
     /**
      * Constructs a new Captcha object.
