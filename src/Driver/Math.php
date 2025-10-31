@@ -49,7 +49,7 @@ class Math extends Captcha
         $this->mathExercise = implode(' + ', $numbers) . ' = ';
 
         // Return the answer
-        $this->response = array_sum($numbers);
+        $this->response = (string) array_sum($numbers);
 
         return $this->response;
     }
