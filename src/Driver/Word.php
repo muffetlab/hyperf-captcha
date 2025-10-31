@@ -13,7 +13,6 @@ declare(strict_types=1);
 namespace Muffetlab\Captcha\Driver;
 
 use Muffetlab\Captcha\Captcha;
-use Muffetlab\Captcha\Driver\Basic;
 
 class Word extends Basic
 {
