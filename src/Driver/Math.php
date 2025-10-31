@@ -57,9 +57,9 @@ class Math extends Captcha
     /**
      * Outputs the Captcha riddle.
      *
-     * @return mixed
+     * @return string
      */
-    public function render()
+    public function render(): string
     {
         return $this->mathExercise;
     }
