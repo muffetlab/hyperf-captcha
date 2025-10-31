@@ -27,6 +27,17 @@ use Muffetlab\Captcha\CaptchaFactory;
 $captchaFactory = ApplicationContext::getContainer()->get(CaptchaFactory::class);
 ```
 
+> **Note:** Since version 1.1.0, the package namespace has been changed from `Kilofox` to `Muffetlab`. If you're
+> upgrading from a previous version, please update your code accordingly:
+
+```
+// Old namespace (before 1.1.0)
+use Kilofox\Captcha\CaptchaFactory;
+
+// New namespace (since 1.1.0)q
+use Muffetlab\Captcha\CaptchaFactory;
+```
+
 Render a captcha:
 
 ```
