@@ -22,7 +22,7 @@ class Basic extends Captcha
      *
      * @return string The challenge answer
      */
-    public function generateChallenge()
+    public function generateChallenge(): string
     {
         // Complexity setting is used as character count
         $this->response = (string) ByteString::fromRandom(max(1, Captcha::$config['complexity']), '2345679ACDEFHJKLMNPRSTUVWXYZ');

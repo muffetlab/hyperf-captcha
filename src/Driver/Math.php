@@ -26,7 +26,7 @@ class Math extends Captcha
      *
      * @return string The challenge answer
      */
-    public function generateChallenge()
+    public function generateChallenge(): string
     {
         // Easy
         if (Captcha::$config['complexity'] < 4) {

@@ -26,7 +26,7 @@ class Riddle extends Captcha
      *
      * @return string The challenge answer
      */
-    public function generateChallenge()
+    public function generateChallenge(): string
     {
         // Load riddles from the current language
         $riddles = config('captcha.riddles');
