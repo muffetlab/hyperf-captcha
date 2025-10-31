@@ -12,6 +12,7 @@ namespace Muffetlab\Captcha;
 
 use Psr\SimpleCache\CacheInterface;
 use Psr\SimpleCache\InvalidArgumentException;
+use RuntimeException;
 
 class CaptchaFactory
 {
@@ -28,7 +29,7 @@ class CaptchaFactory
     protected string $response;
 
     /**
-     * @var \Psr\SimpleCache\CacheInterface
+     * @var CacheInterface
      */
     protected CacheInterface $cache;
 
@@ -54,7 +55,7 @@ class CaptchaFactory
     public function create(string $key, string $group = 'default'): object
     {
         if (!$key) {
-            throw new \RuntimeException('No captcha key provided.');
+            throw new RuntimeException('No captcha key provided.');
         }
 
         // Load the configuration for this group
@@ -89,7 +90,7 @@ class CaptchaFactory
     public function updateResponse(string $key)
     {
         if (!$key) {
-            throw new \RuntimeException('No captcha key provided.');
+            throw new RuntimeException('No captcha key provided.');
         }
 
         // Store the correct Captcha response in a cache
