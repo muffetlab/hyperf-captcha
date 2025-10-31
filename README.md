@@ -22,7 +22,7 @@ Instantiate captcha factory:
 
 ```
 use Hyperf\Utils\ApplicationContext;
-use muffetlab\Captcha\CaptchaFactory;
+use Muffetlab\Captcha\CaptchaFactory;
 
 $captchaFactory = ApplicationContext::getContainer()->get(CaptchaFactory::class);
 ```
