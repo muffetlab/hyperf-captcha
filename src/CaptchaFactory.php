@@ -17,14 +17,14 @@ class CaptchaFactory
     /**
      * @var array Default config values
      */
-    public static $config = [
+    public static array $config = [
         'style' => 'basic',
     ];
 
     /**
      * @var string The correct Captcha challenge answer
      */
-    protected $response;
+    protected string $response;
 
     /**
      * @var \Psr\SimpleCache\CacheInterface
