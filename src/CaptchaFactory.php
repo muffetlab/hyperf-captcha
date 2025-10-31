@@ -50,7 +50,7 @@ class CaptchaFactory
      * @return object
      * @throws RuntimeException
      */
-    public function create(string $key, string $group = 'default')
+    public function create(string $key, string $group = 'default'): object
     {
         if (!$key) {
             throw new \RuntimeException('No captcha key provided.');
@@ -113,7 +113,7 @@ class CaptchaFactory
      * @param string $response User's captcha response
      * @return bool
      */
-    public function valid(string $key, string $response)
+    public function valid(string $key, string $response): bool
     {
         // Challenge result
         $result = sha1(mb_strtoupper($response)) === $this->cache->get('captcha_response_' . $key);
@@ -136,7 +136,7 @@ class CaptchaFactory
      * @param bool $invalid Trigger invalid counter (for internal use only)
      * @return int Counter value
      */
-    public function validCount(string $key, int $newCount = null, bool $invalid = false)
+    public function validCount(string $key, int $newCount = null, bool $invalid = false): int
     {
         // Pick the right key to use
         $key = ($invalid ? 'captcha_invalid_count_' : 'captcha_valid_count_') . $key;
@@ -167,7 +167,7 @@ class CaptchaFactory
      * @param int $newCount New counter value
      * @return int Counter value
      */
-    public function invalidCount(string $key, int $newCount = null)
+    public function invalidCount(string $key, int $newCount = null): int
     {
         return $this->validCount($key, $newCount, true);
     }

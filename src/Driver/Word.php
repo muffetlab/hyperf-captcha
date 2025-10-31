@@ -22,7 +22,7 @@ class Word extends Basic
      *
      * @return string The challenge answer
      */
-    public function generateChallenge()
+    public function generateChallenge(): string
     {
         // Load words from the current language and randomize them
         $words = config('captcha.words');

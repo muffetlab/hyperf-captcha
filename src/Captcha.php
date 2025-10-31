@@ -241,7 +241,7 @@ abstract class Captcha
      *
      * @return object
      */
-    public function imageRender()
+    public function imageRender(): object
     {
         ob_start();
 
