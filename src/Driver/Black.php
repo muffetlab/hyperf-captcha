@@ -33,9 +33,9 @@ class Black extends Captcha
     /**
      * Outputs the Captcha image.
      *
-     * @return mixed
+     * @return object
      */
-    public function render()
+    public function render(): object
     {
         // Creates a black image to start from
         $this->imageCreate(Captcha::$config['background']);

@@ -33,9 +33,9 @@ class Alpha extends Captcha
     /**
      * Outputs the Captcha image.
      *
-     * @return mixed
+     * @return object
      */
-    public function render()
+    public function render(): object
     {
         // Creates $this->image
         $this->imageCreate(Captcha::$config['background']);
