@@ -11,6 +11,7 @@
 namespace Muffetlab\Captcha;
 
 use Psr\SimpleCache\CacheInterface;
+use Psr\SimpleCache\InvalidArgumentException;
 
 class CaptchaFactory
 {
@@ -34,8 +35,7 @@ class CaptchaFactory
     /**
      * Constructs a new Captcha object.
      *
-     * @param object $cache Cache interface
-     * @return void
+     * @param CacheInterface $cache Cache interface
      */
     public function __construct(CacheInterface $cache)
     {
@@ -132,9 +132,10 @@ class CaptchaFactory
      * Gets or sets the number of valid Captcha responses for this key.
      *
      * @param string $key The captcha key
-     * @param int $newCount New counter value
+     * @param int|null $newCount New counter value
      * @param bool $invalid Trigger invalid counter (for internal use only)
      * @return int Counter value
+     * @throws InvalidArgumentException
      */
     public function validCount(string $key, int $newCount = null, bool $invalid = false): int
     {
@@ -164,8 +165,9 @@ class CaptchaFactory
      * Gets or sets the number of invalid Captcha responses for this key.
      *
      * @param string $key The captcha key
-     * @param int $newCount New counter value
+     * @param int|null $newCount New counter value
      * @return int Counter value
+     * @throws InvalidArgumentException
      */
     public function invalidCount(string $key, int $newCount = null): int
     {

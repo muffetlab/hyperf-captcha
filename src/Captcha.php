@@ -53,9 +53,7 @@ abstract class Captcha
     /**
      * Constructs a new Captcha object.
      *
-     * @param string Config group name
-     * @return void
-     * @throws RuntimeException
+     * @param string|null $group Config group name
      */
     public function __construct(string $group = null)
     {
@@ -137,9 +135,8 @@ abstract class Captcha
      * Creates an image resource with the dimensions specified in config.
      * If a background image is supplied, the image dimensions are used.
      *
-     * @param string $background Path to the background image file
+     * @param string|null $background Path to the background image file
      * @return void
-     * @throws RuntimeException If no GD2 support
      */
     public function imageCreate(string $background = null)
     {
