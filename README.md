@@ -34,7 +34,7 @@ $captchaFactory = ApplicationContext::getContainer()->get(CaptchaFactory::class)
 // Old namespace (before 1.1.0)
 use Kilofox\Captcha\CaptchaFactory;
 
-// New namespace (since 1.1.0)q
+// New namespace (since 1.1.0)
 use Muffetlab\Captcha\CaptchaFactory;
 ```
 
