@@ -19,7 +19,7 @@ class Riddle extends Captcha
     /**
      * @var string Captcha riddle
      */
-    private $riddle;
+    private string $riddle;
 
     /**
      * Generates a new Captcha challenge.

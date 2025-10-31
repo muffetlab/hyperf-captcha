@@ -21,12 +21,12 @@ abstract class Captcha
     /**
      * @var string Style-dependent Captcha driver
      */
-    protected $driver;
+    protected string $driver;
 
     /**
      * @var array Default config values
      */
-    public static $config = [
+    public static array $config = [
         'width' => 150,
         'height' => 50,
         'complexity' => 4,
@@ -38,17 +38,17 @@ abstract class Captcha
     /**
      * @var string The correct Captcha challenge answer
      */
-    protected $response;
+    protected string $response;
 
     /**
      * @var string Image resource identifier
      */
-    protected $image;
+    protected string $image;
 
     /**
      * @var string Image type ("png", "gif" or "jpeg")
      */
-    protected $imageType = 'png';
+    protected string $imageType = 'png';
 
     /**
      * Constructs a new Captcha object.

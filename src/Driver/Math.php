@@ -19,7 +19,7 @@ class Math extends Captcha
     /**
      * @var string Captcha math exercise
      */
-    private $mathExercise;
+    private string $mathExercise;
 
     /**
      * Generates a new Captcha challenge.
