@@ -1,6 +1,5 @@
 {
     "name": "muffetlab/hyperf-captcha",
-    "version": "1.1.0",
     "description": "A captcha component for Hyperf.",
     "license": "MIT",
     "keywords": [
