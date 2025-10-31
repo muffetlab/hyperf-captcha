@@ -9,6 +9,7 @@
     ],
     "require": {
         "php": ">=7.4",
+        "ext-gd": "*",
         "psr/simple-cache": "^1.0",
         "hyperf/http-message": "^2.2",
         "hyperf/utils": "^2.2",
