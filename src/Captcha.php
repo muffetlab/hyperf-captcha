@@ -41,9 +41,9 @@ abstract class Captcha
     protected string $response;
 
     /**
-     * @var string Image resource identifier
+     * @var mixed Image resource identifier
      */
-    protected string $image;
+    protected $image;
 
     /**
      * @var string Image type ("png", "gif" or "jpeg")
@@ -181,12 +181,12 @@ abstract class Captcha
     /**
      * Fills the background with a gradient.
      *
-     * @param resource $color1 GD image color identifier for start color
-     * @param resource $color2 GD image color identifier for end color
-     * @param string $direction Direction: 'horizontal' or 'vertical', 'random' by default
+     * @param int $color1 GD image color identifier for start color
+     * @param int $color2 GD image color identifier for end color
+     * @param string|null $direction Direction: 'horizontal' or 'vertical', 'random' by default
      * @return void
      */
-    public function imageGradient($color1, $color2, string $direction = null)
+    public function imageGradient(int $color1, int $color2, string $direction = null)
     {
         $directions = ['horizontal', 'vertical'];
 
