@@ -12,8 +12,8 @@ declare(strict_types=1);
 
 namespace Muffetlab\Captcha\Driver;
 
-use Kilofox\Captcha\Captcha;
-use Kilofox\Captcha\Driver\Basic;
+use Muffetlab\Captcha\Captcha;
+use Muffetlab\Captcha\Driver\Basic;
 
 class Word extends Basic
 {
