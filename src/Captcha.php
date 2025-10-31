@@ -15,6 +15,7 @@ namespace Muffetlab\Captcha;
 use Hyperf\Context\Context;
 use Hyperf\HttpMessage\Stream\SwooleStream;
 use Psr\Http\Message\ResponseInterface;
+use RuntimeException;
 
 abstract class Captcha
 {
@@ -64,14 +65,14 @@ abstract class Captcha
 
         // Load and validate config group
         if (!is_array($config = config('captcha.' . $group))) {
-            throw new \RuntimeException('Captcha group not defined in ' . $group . ' configuration');
+            throw new RuntimeException('Captcha group not defined in ' . $group . ' configuration');
         }
 
         // All captcha config groups inherit default config group
         if ($group !== 'default') {
             // Load and validate default config group
             if (!is_array($default = config('captcha.default'))) {
-                throw new \RuntimeException('Captcha group not defined in default configuration');
+                throw new RuntimeException('Captcha group not defined in default configuration');
             }
 
             // Merge config group with default config group
@@ -90,7 +91,7 @@ abstract class Captcha
             Captcha::$config['background'] = str_replace('\\', '/', realpath($config['background']));
 
             if (!is_file(Captcha::$config['background'])) {
-                throw new \RuntimeException('The specified file ' . Captcha::$config['background'] . ' was not found.');
+                throw new RuntimeException('The specified file ' . Captcha::$config['background'] . ' was not found.');
             }
         }
 
@@ -100,7 +101,7 @@ abstract class Captcha
 
             foreach ($config['fonts'] as $font) {
                 if (!is_file(Captcha::$config['fontpath'] . $font)) {
-                    throw new \RuntimeException('The specified file ' . Captcha::$config['fontpath'] . $font . ' was not found.');
+                    throw new RuntimeException('The specified file ' . Captcha::$config['fontpath'] . $font . ' was not found.');
                 }
             }
         }
@@ -142,7 +143,7 @@ abstract class Captcha
     {
         // Check for GD2 support
         if (!function_exists('imagegd2')) {
-            throw new \RuntimeException('Captcha requires GD2');
+            throw new RuntimeException('Captcha requires GD2');
         }
 
         // Create a new image (black)
