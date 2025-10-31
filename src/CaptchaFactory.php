@@ -49,6 +49,7 @@ class CaptchaFactory
      * @param string $group Config group name
      * @return object
      * @throws RuntimeException
+     * @throws InvalidArgumentException
      */
     public function create(string $key, string $group = 'default'): object
     {
@@ -83,6 +84,7 @@ class CaptchaFactory
      *
      * @param string $key The captcha key
      * @return void
+     * @throws InvalidArgumentException
      */
     public function updateResponse(string $key)
     {
@@ -99,6 +101,7 @@ class CaptchaFactory
      *
      * @param string $key The captcha key
      * @return void
+     * @throws InvalidArgumentException
      */
     public function deleteResponse(string $key)
     {
@@ -112,6 +115,7 @@ class CaptchaFactory
      * @param string $key The captcha key
      * @param string $response User's captcha response
      * @return bool
+     * @throws InvalidArgumentException
      */
     public function valid(string $key, string $response): bool
     {
@@ -179,6 +183,7 @@ class CaptchaFactory
      *
      * @param string $key The captcha key
      * @return void
+     * @throws InvalidArgumentException
      */
     public function resetCount(string $key)
     {
