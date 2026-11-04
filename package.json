@@ -1,6 +1,6 @@
 {
   "name": "hyperf-captcha",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "A captcha component for Hyperf.",
   "repository": {
     "type": "git",

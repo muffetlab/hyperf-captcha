@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.2.1](https://github.com/muffetlab/hyperf-captcha/compare/v1.2.0...v1.2.1) (2026-11-04)
+
+### Bug Fixes
+
+* widen psr/simple-cache constraint to ^1.0|^2.0|^3.0 ([a0d1797](https://github.com/muffetlab/hyperf-captcha/commit/a0d1797a7a7129b32a3a6ff6b657185f855767e3))
+
 ## [1.2.0](https://github.com/muffetlab/hyperf-captcha/compare/v1.1.0...v1.2.0) (2026-11-04)
 
 ### ⚠ BREAKING CHANGES
