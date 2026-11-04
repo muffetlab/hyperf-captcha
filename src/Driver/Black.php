@@ -49,7 +49,7 @@ class Black extends Captcha
         }
 
         // Use different fonts if available
-        $font = Captcha::$config['fontpath'] . Captcha::$config['fonts'][array_rand(Captcha::$config['fonts'])];
+        $font = Captcha::$config['font_path'] . Captcha::$config['fonts'][array_rand(Captcha::$config['fonts'])];
 
         // Draw the character's white shadows
         $size = (int) min(Captcha::$config['height'] / 2, Captcha::$config['width'] * 0.8 / mb_strlen($this->response));

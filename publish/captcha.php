@@ -11,7 +11,7 @@
  *  height		Height of the Captcha image
  *  complexity	Difficulty level (0-10), usage depends on chosen style
  *  background	Path to background image file
- *  fontpath	Path to font folder
+ *  font_path	Path to font folder
  *  fonts		Font files
  */
 return [
@@ -21,7 +21,7 @@ return [
         'height' => 50,
         'complexity' => 4,
         'background' => '',
-        'fontpath' => BASE_PATH . '/vendor/muffetlab/hyperf-captcha/Resources/fonts',
+        'font_path' => BASE_PATH . '/vendor/muffetlab/hyperf-captcha/Resources/fonts',
         'fonts' => ['DejaVuSerif.ttf'],
     ],
     // Words of varying length for Captcha_Word to pick from

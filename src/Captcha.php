@@ -31,7 +31,7 @@ abstract class Captcha
         'height' => 50,
         'complexity' => 4,
         'background' => '',
-        'fontpath' => '',
+        'font_path' => '',
         'fonts' => [],
     ];
 
@@ -96,11 +96,11 @@ abstract class Captcha
 
         // If using any fonts, check if they exist
         if (!empty($config['fonts'])) {
-            Captcha::$config['fontpath'] = str_replace('\\', '/', realpath($config['fontpath'])) . '/';
+            Captcha::$config['font_path'] = str_replace('\\', '/', realpath($config['font_path'])) . '/';
 
             foreach ($config['fonts'] as $font) {
-                if (!is_file(Captcha::$config['fontpath'] . $font)) {
-                    throw new RuntimeException('The specified file ' . Captcha::$config['fontpath'] . $font . ' was not found.');
+                if (!is_file(Captcha::$config['font_path'] . $font)) {
+                    throw new RuntimeException('The specified file ' . Captcha::$config['font_path'] . $font . ' was not found.');
                 }
             }
         }

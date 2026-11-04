@@ -64,7 +64,7 @@ class Alpha extends Captcha
         // Draw each Captcha character with varying attributes
         for ($i = 0, $strlen = strlen($this->response); $i < $strlen; $i++) {
             // Use different fonts if available
-            $font = Captcha::$config['fontpath'] . Captcha::$config['fonts'][array_rand(Captcha::$config['fonts'])];
+            $font = Captcha::$config['font_path'] . Captcha::$config['fonts'][array_rand(Captcha::$config['fonts'])];
 
             $angle = mt_rand(-40, 20);
             // Scale the character size on image height
