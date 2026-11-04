@@ -43,7 +43,7 @@ return [
         ['Are you a robot? (yes or no)', 'no'],
         ['Fire is... (hot or cold)', 'hot'],
         ['The season after fall is...', 'winter'],
-        ['Which day of the week is it today?', strftime('%A')],
-        ['Which month of the year are we in?', strftime('%B')],
+        ['Which day of the week is it today?', date('l')],
+        ['Which month of the year are we in?', date('F')],
     ],
 ];

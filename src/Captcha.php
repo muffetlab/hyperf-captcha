@@ -43,7 +43,7 @@ abstract class Captcha
     /**
      * @var mixed Image resource identifier
      */
-    protected $image;
+    protected mixed $image;
 
     /**
      * @var string Image type ("png", "gif" or "jpeg")
@@ -55,7 +55,7 @@ abstract class Captcha
      *
      * @param string|null $group Config group name
      */
-    public function __construct(string $group = null)
+    public function __construct(?string $group = null)
     {
         // No config group name given
         if (!is_string($group)) {
@@ -112,23 +112,14 @@ abstract class Captcha
      * @param string $filename Filename
      * @return string|bool Image type ("png", "gif" or "jpeg")
      */
-    public function imageType(string $filename)
+    public function imageType(string $filename): bool|string
     {
-        switch (strtolower(substr(strrchr($filename, '.'), 1))) {
-            case 'png':
-                return 'png';
-
-            case 'gif':
-                return 'gif';
-
-            case 'jpg':
-            case 'jpeg':
-                // Return "jpeg" and not "jpg" because of the GD2 function names
-                return 'jpeg';
-
-            default:
-                return false;
-        }
+        return match (strtolower(substr(strrchr($filename, '.'), 1))) {
+            'png' => 'png',
+            'gif' => 'gif',
+            'jpg', 'jpeg' => 'jpeg',
+            default => false,
+        };
     }
 
     /**
@@ -138,7 +129,7 @@ abstract class Captcha
      * @param string|null $background Path to the background image file
      * @return void
      */
-    public function imageCreate(string $background = null)
+    public function imageCreate(?string $background = null): void
     {
         // Check for GD2 support
         if (!function_exists('imagegd2')) {
@@ -183,7 +174,7 @@ abstract class Captcha
      * @param string|null $direction Direction: 'horizontal' or 'vertical', 'random' by default
      * @return void
      */
-    public function imageGradient(int $color1, int $color2, string $direction = null)
+    public function imageGradient(int $color1, int $color2, ?string $direction = null): void
     {
         $directions = ['horizontal', 'vertical'];
 

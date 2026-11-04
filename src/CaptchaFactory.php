@@ -86,7 +86,7 @@ class CaptchaFactory
      * @return void
      * @throws InvalidArgumentException
      */
-    public function updateResponse(string $key)
+    public function updateResponse(string $key): void
     {
         if (!$key) {
             throw new RuntimeException('No captcha key provided.');
@@ -103,7 +103,7 @@ class CaptchaFactory
      * @return void
      * @throws InvalidArgumentException
      */
-    public function deleteResponse(string $key)
+    public function deleteResponse(string $key): void
     {
         // Store the correct Captcha response in a cache
         $this->cache->delete('captcha_response_' . $key);
@@ -141,7 +141,7 @@ class CaptchaFactory
      * @return int Counter value
      * @throws InvalidArgumentException
      */
-    public function validCount(string $key, int $newCount = null, bool $invalid = false): int
+    public function validCount(string $key, ?int $newCount = null, bool $invalid = false): int
     {
         // Pick the right key to use
         $key = ($invalid ? 'captcha_invalid_count_' : 'captcha_valid_count_') . $key;
@@ -173,7 +173,7 @@ class CaptchaFactory
      * @return int Counter value
      * @throws InvalidArgumentException
      */
-    public function invalidCount(string $key, int $newCount = null): int
+    public function invalidCount(string $key, ?int $newCount = null): int
     {
         return $this->validCount($key, $newCount, true);
     }
@@ -185,7 +185,7 @@ class CaptchaFactory
      * @return void
      * @throws InvalidArgumentException
      */
-    public function resetCount(string $key)
+    public function resetCount(string $key): void
     {
         $this->validCount($key, 0);
         $this->validCount($key, 0, true);
