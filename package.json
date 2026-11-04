@@ -1,0 +1,26 @@
+{
+  "name": "hyperf-captcha",
+  "version": "1.1.0",
+  "description": "A captcha component for Hyperf.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/muffetlab/hyperf-captcha.git"
+  },
+  "keywords": [
+    "php",
+    "hyperf",
+    "captcha"
+  ],
+  "author": "Muffet Lab",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/muffetlab/hyperf-captcha/issues"
+  },
+  "homepage": "https://github.com/muffetlab/hyperf-captcha#readme",
+  "devDependencies": {
+    "commit-and-tag-version": "^13.3.0"
+  },
+  "scripts": {
+    "release": "commit-and-tag-version"
+  }
+}
