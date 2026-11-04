@@ -10,7 +10,7 @@ use Muffetlab\Captcha\Captcha;
  * Math captcha class.
  *
  * @author     Loong <loong2460@gmail.com>
- * @copyright  (c) 2021 Muffet Laboratory
+ * @copyright  (c) 2021-2026 Muffet Lab
  * @license    MIT License
  */
 class Math extends Captcha

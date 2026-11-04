@@ -11,7 +11,7 @@ use Muffetlab\Captcha\Captcha;
  * Black captcha class.
  *
  * @author     Loong <loong2460@gmail.com>
- * @copyright  (c) 2021 Muffet Laboratory
+ * @copyright  (c) 2021-2026 Muffet Lab
  * @license    MIT License
  */
 class Black extends Captcha
