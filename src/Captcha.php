@@ -9,6 +9,8 @@ use Hyperf\HttpMessage\Stream\SwooleStream;
 use Psr\Http\Message\ResponseInterface;
 use RuntimeException;
 
+use function Hyperf\Config\config;
+
 /**
  * Captcha class.
  *

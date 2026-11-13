@@ -11,9 +11,13 @@
         "php": ">=8.0",
         "ext-gd": "*",
         "psr/simple-cache": "^1.0|^2.0|^3.0",
+        "hyperf/config": "^3.0",
         "hyperf/context": "^3.0",
         "hyperf/http-message": "^3.0",
         "symfony/string": "^5.3|^6.0|^7.0"
+    },
+    "require-dev": {
+        "phpstan/phpstan": "^2.3"
     },
     "autoload": {
         "psr-4": {

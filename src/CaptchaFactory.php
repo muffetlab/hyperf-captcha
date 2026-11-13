@@ -6,6 +6,8 @@ use Psr\SimpleCache\CacheInterface;
 use Psr\SimpleCache\InvalidArgumentException;
 use RuntimeException;
 
+use function Hyperf\Config\config;
+
 /**
  * Captcha factory.
  *

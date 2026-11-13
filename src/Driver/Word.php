@@ -6,6 +6,8 @@ namespace Muffetlab\Captcha\Driver;
 
 use Muffetlab\Captcha\Captcha;
 
+use function Hyperf\Config\config;
+
 /**
  * Word captcha class.
  *
